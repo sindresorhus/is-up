@@ -2,7 +2,11 @@
 var got = require('got');
 
 module.exports = function (url, cb) {
-	got('http://isitup.org/' + url  + '.json', function (err, res) {
+	got('http://isitup.org/' + url  + '.json', {
+		headers: {
+			'user-agent': 'https://github.com/sindresorhus/is-up'
+		}
+	}, function (err, res) {
 		if (err) {
 			cb(err);
 			return;
