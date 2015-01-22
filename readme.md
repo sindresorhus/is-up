@@ -7,7 +7,7 @@
 
 ## CLI
 
-```sh
+```
 $ npm install --global is-up
 ```
 
@@ -22,7 +22,7 @@ $ is-up --help
 
 ## API
 
-```sh
+```
 $ npm install --save is-up
 ```
 
