@@ -9,9 +9,7 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": {
-    "is-up": "cli.js"
-  },
+  "bin": "cli.js",
   "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0"
@@ -24,6 +22,7 @@
     "cli.js"
   ],
   "keywords": [
+    "cli-app",
     "cli",
     "bin",
     "up",
