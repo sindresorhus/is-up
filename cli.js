@@ -1,33 +1,18 @@
 #!/usr/bin/env node
 'use strict';
+var meow = require('meow');
 var logSymbols = require('log-symbols');
-var pkg = require('./package.json');
 var isUp = require('./');
-var argv = process.argv.slice(2);
-var input = argv[0];
 
-function help() {
-	console.log([
-		'',
-		'  ' + pkg.description,
-		'',
-		'  Example',
-		'    is-up sindresorhus.com',
-		'    ' + logSymbols.success + ' Up'
-	].join('\n'));
-}
+var cli = meow({
+	help: [
+		'Example',
+		'  is-up sindresorhus.com',
+		'  ' + logSymbols.success + ' Up'
+	].join('\n')
+});
 
-if (!input || argv.indexOf('--help') !== -1) {
-	help();
-	return;
-}
-
-if (argv.indexOf('--version') !== -1) {
-	console.log(pkg.version);
-	return;
-}
-
-isUp(input, function (err, up) {
+isUp(cli.input, function (err, up) {
 	if (err) {
 		throw err;
 	}
