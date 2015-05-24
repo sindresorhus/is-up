@@ -14,7 +14,8 @@ var cli = meow({
 
 isUp(cli.input, function (err, up) {
 	if (err) {
-		throw err;
+		console.error(err.message);
+		process.exit(2);
 	}
 
 	console.log(up ? logSymbols.success + ' Up' : logSymbols.error + ' Down');
