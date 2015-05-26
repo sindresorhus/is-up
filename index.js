@@ -3,6 +3,7 @@ var got = require('got');
 
 module.exports = function (url, cb) {
 	got('http://isitup.org/' + url  + '.json', {
+		json: true,
 		headers: {
 			'user-agent': 'https://github.com/sindresorhus/is-up'
 		}
@@ -11,8 +12,6 @@ module.exports = function (url, cb) {
 			cb(err);
 			return;
 		}
-
-		res = JSON.parse(res);
 
 		if (res.status_code === 3) {
 			cb(new Error('Invalid domain'));
