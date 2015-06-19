@@ -9,7 +9,7 @@ var cli = meow({
 		'Example',
 		'  is-up sindresorhus.com',
 		'  ' + logSymbols.success + ' Up'
-	].join('\n')
+	]
 });
 
 isUp(cli.input, function (err, up) {
