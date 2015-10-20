@@ -12,12 +12,7 @@ var cli = meow({
 	]
 });
 
-isUp(cli.input, function (err, up) {
-	if (err) {
-		console.error(err.message);
-		process.exit(2);
-	}
-
+isUp(cli.input).then(function (up) {
 	console.log(up ? logSymbols.success + ' Up' : logSymbols.error + ' Down');
 	process.exit(up ? 0 : 1);
 });

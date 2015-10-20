@@ -1,23 +1,17 @@
 'use strict';
 var got = require('got');
 
-module.exports = function (url, cb) {
-	got('http://isitup.org/' + url  + '.json', {
+module.exports = function (url) {
+	return got('http://isitup.org/' + url + '.json', {
 		json: true,
 		headers: {
 			'user-agent': 'https://github.com/sindresorhus/is-up'
 		}
-	}, function (err, res) {
-		if (err) {
-			cb(err);
-			return;
+	}).then(function (res) {
+		if (res.body.status_code === 3) {
+			throw new Error('Invalid domain');
 		}
 
-		if (res.status_code === 3) {
-			cb(new Error('Invalid domain'));
-			return;
-		}
-
-		cb(null, res.status_code === 1);
+		return res.body.status_code === 1;
 	});
 };

@@ -27,9 +27,9 @@ $ npm install --save is-up
 ```
 
 ```js
-var isUp = require('is-up');
+const isUp = require('is-up');
 
-isUp('sindresorhus.com', function (err, up) {
+isUp('sindresorhus.com').then(up => {
 	console.log(up);
 	//=> true
 });
