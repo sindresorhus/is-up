@@ -9,8 +9,6 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
-  "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0"
   },
@@ -18,26 +16,24 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
-    "bin",
     "up",
     "down",
     "website",
     "webpage",
-    "ip"
+    "ip",
+    "live",
+    "running",
+    "online",
+    "offline"
   ],
   "dependencies": {
-    "got": "^5.0.0",
-    "log-symbols": "^1.0.0",
-    "meow": "^3.3.0"
+    "got": "^5.0.0"
   },
   "devDependencies": {
-    "ava": "^0.2.0",
+    "ava": "*",
     "xo": "*"
   },
   "xo": {
