@@ -6,7 +6,7 @@ test('up', async t => {
 });
 
 test('down', async t => {
-	t.false(await fn('afsadgsdcgdcfgefcasfcascfsadf.com'));
+	t.false(await fn(`foobar${Math.random().toString().slice(2)}.com`));
 });
 
 test('invalid domain', async t => {
