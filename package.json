@@ -1,6 +1,6 @@
 {
 	"name": "is-up",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Check whether a website is up or down",
 	"license": "MIT",
 	"repository": "sindresorhus/is-up",
