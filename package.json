@@ -1,39 +1,40 @@
 {
-  "name": "is-up",
-  "version": "2.0.0",
-  "description": "Check whether a website is up or down",
-  "license": "MIT",
-  "repository": "sindresorhus/is-up",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "up",
-    "down",
-    "website",
-    "webpage",
-    "ip",
-    "live",
-    "running",
-    "online",
-    "offline"
-  ],
-  "dependencies": {
-    "got": "^5.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "is-up",
+	"version": "2.0.0",
+	"description": "Check whether a website is up or down",
+	"license": "MIT",
+	"repository": "sindresorhus/is-up",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"up",
+		"down",
+		"website",
+		"webpage",
+		"ip",
+		"live",
+		"running",
+		"online",
+		"offline"
+	],
+	"dependencies": {
+		"got": "^9.3.1"
+	},
+	"devDependencies": {
+		"ava": "^1.0.0-rc.1",
+		"unique-string": "^1.0.0",
+		"xo": "^0.23.0"
+	}
 }

@@ -1,12 +1,12 @@
 # is-up [![Build Status](https://travis-ci.org/sindresorhus/is-up.svg?branch=master)](https://travis-ci.org/sindresorhus/is-up)
 
-> Check whether a website is up or down using the [isitup.org](http://isitup.org) API
+> Check whether a website is up or down using the [isitup.org](https://isitup.org) API
 
 
 ## Install
 
 ```
-$ npm install --save is-up
+$ npm install is-up
 ```
 
 
@@ -15,11 +15,13 @@ $ npm install --save is-up
 ```js
 const isUp = require('is-up');
 
-isUp('sindresorhus.com').then(up => {
-	console.log(up);
+(async () => {
+	console.log(await isUp('https://sindresorhus.com'));
 	//=> true
-});
+})();
 ```
+
+*Specifying the protocol is optional.*
 
 
 ## Related
@@ -29,4 +31,4 @@ isUp('sindresorhus.com').then(up => {
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
