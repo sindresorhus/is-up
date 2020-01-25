@@ -8,7 +8,7 @@ const statusCodes = {
 };
 
 module.exports = async url => {
-	url = url.replace(/^(?:https?:)?\/\//, '');
+	url = url.substring(url.indexOf('www'), url.indexOf('.com') + 4)
 	url = encodeURIComponent(url);
 
 	const {body} = await got(`https://isitup.org/${url}.json`, {
