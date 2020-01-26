@@ -8,9 +8,10 @@ const statusCodes = {
 };
 
 module.exports = async url => {
-	url = url.substring(url.indexOf('www'), url.indexOf('.com') + 4);
-	url = encodeURIComponent(url);
 
+	url = new URL(url);
+	url = encodeURIComponent(url.host);
+	
 	const {body} = await got(`https://isitup.org/${url}.json`, {
 		json: true,
 		headers: {
