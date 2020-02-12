@@ -11,5 +11,5 @@ test('down', async t => {
 });
 
 test('invalid domain', async t => {
-	await t.throwsAsync(isUp('unicorn'), 'Invalid domain');
+	await t.throwsAsync(isUp('unicorn'), 'Invalid URL: unicorn');
 });
