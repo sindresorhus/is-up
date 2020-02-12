@@ -4,13 +4,14 @@
 	"description": "Check whether a website is up or down",
 	"license": "MIT",
 	"repository": "sindresorhus/is-up",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -30,11 +31,11 @@
 		"offline"
 	],
 	"dependencies": {
-		"got": "^9.3.1"
+		"got": "^10.5.5"
 	},
 	"devDependencies": {
-		"ava": "^1.0.0-rc.1",
-		"unique-string": "^1.0.0",
-		"xo": "^0.23.0"
+		"ava": "^1.0.0",
+		"unique-string": "^2.0.0",
+		"xo": "^0.25.4"
 	}
 }

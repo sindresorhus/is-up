@@ -8,17 +8,13 @@ const statusCodes = {
 };
 
 module.exports = async url => {
-	url = new URL(url);
-	url = encodeURIComponent(url.host);
+	const hostname = encodeURIComponent((new URL(url)).hostname);
 
-	const {body} = await got(`https://isitup.org/${url}.json`, {
-		json: true,
+	const {status_code: statusCode} = await got(`https://isitup.org/${hostname}.json`, {
 		headers: {
 			'user-agent': 'https://github.com/sindresorhus/is-up'
 		}
-	});
-
-	const statusCode = body.status_code;
+	}).json();
 
 	if (statusCode === statusCodes.invalidDomain) {
 		throw new Error('Invalid domain');

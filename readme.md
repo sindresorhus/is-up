@@ -2,13 +2,11 @@
 
 > Check whether a website is up or down using the [isitup.org](https://isitup.org) API
 
-
 ## Install
 
 ```
 $ npm install is-up
 ```
-
 
 ## Usage
 
@@ -20,15 +18,9 @@ const isUp = require('is-up');
 	//=> true
 })();
 ```
-
 *Specifying the protocol is optional.*
 
 
 ## Related
 
 - [is-up-cli](https://github.com/sindresorhus/is-up-cli) - CLI for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
