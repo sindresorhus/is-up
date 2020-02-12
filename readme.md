@@ -18,8 +18,6 @@ const isUp = require('is-up');
 	//=> true
 })();
 ```
-*Specifying the protocol is optional.*
-
 
 ## Related
 
