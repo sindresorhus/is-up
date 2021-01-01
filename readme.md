@@ -1,4 +1,4 @@
-# is-up [![Build Status](https://travis-ci.org/sindresorhus/is-up.svg?branch=master)](https://travis-ci.org/sindresorhus/is-up)
+# is-up
 
 > Check whether a website is up or down using the [isitup.org](https://isitup.org) API
 
