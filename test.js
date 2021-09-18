@@ -1,6 +1,6 @@
 import test from 'ava';
 import uniqueString from 'unique-string';
-import isUp from '.';
+import isUp from './index.js';
 
 test('up', async t => {
 	t.true(await isUp('https://google.com'));
@@ -11,5 +11,5 @@ test('down', async t => {
 });
 
 test('invalid domain', async t => {
-	await t.throwsAsync(isUp('unicorn'), 'Invalid URL: unicorn');
+	await t.throwsAsync(isUp('unicorn'), {message: 'Invalid URL'});
 });

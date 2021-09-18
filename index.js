@@ -1,19 +1,18 @@
-'use strict';
-const got = require('got');
+import got from 'got';
 
 const statusCodes = {
 	isUp: 1,
 	isDown: 2,
-	invalidDomain: 3
+	invalidDomain: 3,
 };
 
-module.exports = async url => {
+export default async function isUp(url) {
 	const hostname = encodeURIComponent((new URL(url)).hostname);
 
 	const {status_code: statusCode} = await got(`https://isitup.org/${hostname}.json`, {
 		headers: {
-			'user-agent': 'https://github.com/sindresorhus/is-up'
-		}
+			'user-agent': 'https://github.com/sindresorhus/is-up',
+		},
 	}).json();
 
 	if (statusCode === statusCodes.invalidDomain) {
@@ -21,4 +20,4 @@ module.exports = async url => {
 	}
 
 	return statusCode === statusCodes.isUp;
-};
+}

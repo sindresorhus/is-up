@@ -4,19 +4,17 @@
 
 ## Install
 
-```
-$ npm install is-up
+```sh
+npm install is-up
 ```
 
 ## Usage
 
 ```js
-const isUp = require('is-up');
+import isUp from 'is-up';
 
-(async () => {
-	console.log(await isUp('https://sindresorhus.com'));
-	//=> true
-})();
+console.log(await isUp('https://sindresorhus.com'));
+//=> true
 ```
 
 ## Related
